@@ -56,19 +56,19 @@ img{
     width:1,440px;
     height:725px;
     position: relative;
-
 }
 #title-div{
     position:absolute;
     top:471px;
-    display:flex;
+    /* display:flex; */
     /* background:green; */
-    flex-direction: column;
+    /* flex-direction: column; */
     width:553px;
     height:148px;
 
     left:66px;
-    gap:10px;
+    /* margin-bottom:120px; */
+    /* gap:10px; */
 }
 .watch{
     display:flex;
@@ -76,8 +76,12 @@ img{
     position:absolute;
     width:307px;
     height: 40px;
-    top:629px;
-    left:66px;
+    top:210px;
+    left:6px;
+    
+}
+.main-title{
+    width:560px;
 }
 .watch-button{
     display:flex;
@@ -97,4 +101,23 @@ img{
     height: 40px;
     border-radius: 28px;
     border:1px;
+}
+#witcher-text{
+    color:#ffffff;
+    font-family: lato,sanserif;
+    font-weight: 700px;
+    font-style:bold;
+    font-size:48px;
+    line-height: 100%;
+    
+    text-decoration: capitalize;
+}
+#info-text{
+    font-family: lato,sans-serif;
+    font-size:16px;
+    line-height: 100%;
+    font-weight: 500px;
+    font-style:medium;
+    margin-top:-32px;
+    color:#ffffff;
 }

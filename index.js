@@ -19,7 +19,13 @@ async function backgroundImage() {
   welcome.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${randomIndex.backdrop_path})`;
   welcome.style.backgroundSize = "cover";
   welcome.style.backgroundPosition = "center";
-// welcome.style.opacity=0.2
+const div = document.createElement("div");
+div.classList.add("main-title")
+div.innerHTML=`
+<h2 id="witcher-text">${randomIndex.title}</h2>
+<P id="info-text">${randomIndex.overview}</P>
+`
+document.querySelector("#title-div").appendChild(div);
+
 }   
-  backgroundImage()
-  console.log("hello world",backgroundImage())
+ backgroundImage()
