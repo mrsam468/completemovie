@@ -1,11 +1,26 @@
+
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: #030A1B;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+    
 }
 
 nav{
     width: 1,440px;
     height: 108px;
-    top:19px;
+    top:18px;
+    left:104px;
+    position:fixed;
+    z-index: 1;
+    padding:20px;
+    padding-bottom: 0px;
+    background-color: #030A1B;
+    border-radius: 0.5px;
     
 }
 #overall-div{
@@ -25,6 +40,10 @@ nav{
     gap:45px;
     align-items: center;
 }
+#first-section{
+    margin-top:-40px;
+    padding:0px;
+}
 .first-section-second-div{
     display:flex;
     justify-content: space-between;
@@ -35,13 +54,20 @@ nav{
     width:92px;
     height: 92px;
 }
-h2{
+ul{
+    list-style: none;
+}
+li{
     font-family:lato,sans-serif;
     text-transform: capitalize;
     font-weight: 500px;
     font-size: 24px;
     line-height: 100%;
     color:#ffffff;
+    text-decoration: none;
+}
+.list-icon{
+    display:none;
 }
 .second-section{
     display:flex;
@@ -60,15 +86,12 @@ img{
 #title-div{
     position:absolute;
     top:471px;
-    /* display:flex; */
-    /* background:green; */
-    /* flex-direction: column; */
+  width:553px;
     width:553px;
     height:148px;
 
     left:66px;
-    /* margin-bottom:120px; */
-    /* gap:10px; */
+   
 }
 .watch{
     display:flex;
@@ -76,8 +99,8 @@ img{
     position:absolute;
     width:307px;
     height: 40px;
-    top:210px;
-    left:6px;
+    top:659px;
+    left:66px;
     
 }
 .main-title{
@@ -120,4 +143,160 @@ img{
     font-style:medium;
     margin-top:-32px;
     color:#ffffff;
+}
+@media screen and (max-width: 600px) {
+  
+   body{
+    background-color: #030A1B;
+    margin:0px;
+    padding:0px;
+}
+
+nav{
+    background:none;
+    
+    width: 290px;
+    height: 39px;
+    top:12px;
+   left:6px;
+    
+}
+#overall-div{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    gap:119px;
+    /* flex-direction: column; */
+      width: 290px;
+    height: 39px;
+    margin-top:-12px;
+   margin-left:0px;
+}
+.first-section{
+    display:flex;
+    justify-content: space-between;
+    gap:45px;
+    align-items: center;
+}
+.first-section-second-div{
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    align-items: center;
+    gap:30px;
+}
+.logo{
+    width:26px;
+    height: 26px;
+}
+li{
+    display:none;
+    font-family:lato,sans-serif;
+    text-transform: capitalize;
+    font-weight: 500px;
+    font-size: 24px;
+    line-height: 100%;
+    color:#ffffff;
+}
+.search-icon{
+    margin-left: 30px;
+    display:flex;
+    width:20px;
+    height:20px;
+}
+.notification-icon{
+   
+    display:none;
+}
+.log-icon{
+    display:none;
+}
+.sun-icon{
+    display:none;
+}
+.list-icon{
+    display:flex;
+    width:20px;
+    height:20px;
+}
+.second-section{
+    display:flex;
+    justify-content: space-between;
+    gap:25px;
+}
+img{
+    width:35px;
+    height:35px;
+}
+#section-one{
+    width:99%  ;
+    height:624px;
+    background-size:auto;
+    background-position: inherit;
+    position: relative;
+}
+#title-div{
+    position:absolute;
+    top:239px;
+   
+    width:307px;
+    height:218px;
+padding-bottom:23px;
+padding-top:23px;
+    left:16px;
+   
+}
+.watch{
+    display:flex;
+    justify-content: space-between;
+    position:absolute;
+    width:307px;
+    height: 40px;
+    top:570px;
+    left:16px;
+    
+}
+.main-title{
+    width:560px;
+}
+.watch-button{
+    display:flex;
+    /* justify-content: space-around; */
+    gap:5px;
+    align-items: center;
+    color:#ffffff;
+    
+    background:#228EE5;
+    width:168px;
+    height: 40px;
+    border-radius:20px;
+    border:none
+}
+.more-info-button{
+    width:128px;
+    height: 40px;
+    border-radius: 28px;
+    border:1px;
+}
+#witcher-text{
+    color:hsl(0, 0%, 100%);
+    width:307px;
+    font-family: lato,sanserif;
+    font-weight: 700px;
+    font-style:bold;
+    font-size:48px;
+    line-height: 100%;
+    
+    text-decoration: capitalize;
+}
+#info-text{
+    font-family: lato,sans-serif;
+    font-size:12px;
+    width:307px;
+    line-height: 100%;
+    font-weight: 500px;
+    font-style:medium;
+    margin-top:-32px;
+    color:#ffffff;
+}
 }
