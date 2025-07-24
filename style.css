@@ -4,6 +4,7 @@ html{
 }
 body{
     background-color: #030A1B;
+    
     margin:0px;
     padding:0px;
     overflow: hidden;
@@ -144,6 +145,85 @@ img{
     margin-top:-32px;
     color:#ffffff;
 }
+#second-section{
+    width:1,440px;
+    height: 386px;
+    display:flex;
+    flex-direction:column;
+    /* align-items:center; */
+    justify-content: space-between;
+
+}
+#movies{
+    font-family:lato,sans-serif;
+    font-weight:700px;
+    font-style: bold;
+    font-size:48px;
+    line-height: 100%;
+    margin-left: 64px;
+    color:#EBFAFF;
+    text-decoration: capitalize;
+
+}
+#genres{
+    width:1,440px;
+    height:404px;
+}
+#genre-one{
+width:1,335.19px;
+height: 55px;
+margin-bottom:40px;
+
+
+}
+#trends-text{
+    display:flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap:1230px
+}
+#see-more{
+    width:141px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border-radius:5px;
+    height: 33px;
+    font-family:lato,sans-serif;
+    font-weight:700px;
+    font-size:24px;
+    font-style:bold;
+    border:1px solid #228EE5;
+    line-height: 100%;
+    color:#228EE5
+}
+#see-more-section{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 25px;
+}
+#genre-two{
+    width:1,440px;
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    height:296px;
+    
+    
+}
+#card{
+    width:208px;
+    display:flex;
+    height:296px;
+    /* background-color: purple; */;
+}
+#card-image{
+    width:208px;
+    height:296px;
+    border-radius: 20px;
+    box-shadow:10px 10px 5px rgba(112, 144, 176, 0.2);
+    
+}
+
 @media screen and (max-width: 600px) {
   
    body{
@@ -151,7 +231,6 @@ img{
     margin:0px;
     padding:0px;
 }
-
 nav{
     background:none;
     
