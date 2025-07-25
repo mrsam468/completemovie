@@ -483,7 +483,7 @@ list-style:circle;
     height: 386px;
     display:flex;
     flex-direction:column;
-    /* align-items:center; */
+    align-items:center;
     justify-content: space-between;
 
 }
@@ -496,7 +496,7 @@ list-style:circle;
 #collection-genre{
     width:1,440px;
     display:flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     gap:25px;
     height:296px;
 }
@@ -538,6 +538,20 @@ list-style:circle;
     background-color: #228EE5;
     color:white;
     border:none;
+}
+.cast{
+ width:208px;
+    display:flex;
+    height:296px;
+    margin-left:0px;
+    padding:0px;
+    /* align-items: center; */
+    /* float:left; */
+}
+.from{
+ width:208px;
+    display:flex;
+    height:296px;
 }
 
 

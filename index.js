@@ -161,7 +161,7 @@ const data=await result.json()
 const results=data.results;
 results.forEach(card => {
   const div=document.createElement("div");
-  div.classList.add("card")
+  div.classList.add("from")
   div.innerHTML=`<img id="card-image" src=${baseurl_image}${card.poster_path} alt="${card.title}">`
   document.querySelector("#collection-genre").appendChild(div)
 });
@@ -179,7 +179,7 @@ const data=await result.json()
 const results=data.results;
 results.forEach(card => {
   const div=document.createElement("div");
-  div.classList.add("card")
+  div.classList.add("cast")
   div.innerHTML=`<img id="card-image" src=${baseurl_image}${card.poster_path} alt="${card.title}">`
   document.querySelector("#collection-genre").appendChild(div)
 });
@@ -187,17 +187,36 @@ results.forEach(card => {
 function buttons(){
 const buttonone =document.querySelector(".button-one");
 const buttontwo =document.querySelector(".button-two");
+buttonone.classList.add("button-click")
+moviecollection()
+
 buttonone.addEventListener("click",()=>{
 buttonone.classList.add("button-click");
 buttontwo.classList.remove("button-click");
+const dom=document.querySelectorAll(".cast")
+dom.forEach(card=>{
+card.innerHTML=""
+
+})
+
 moviecollection()
 
 })
 buttontwo.addEventListener("click",()=>{
   buttontwo.classList.add("button-click");
   buttonone.classList.remove("button-click");
-  seriescollection()
+  
+    
+const dom=document.querySelectorAll(".from")
+dom.forEach(card=>{
+card.innerHTML=""
 })
+// dom.item(0)
+
+seriescollection()
+  
+})
+
 }
 
 
