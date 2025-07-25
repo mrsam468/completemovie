@@ -169,6 +169,7 @@ async function moviecollection() {
   });
   const data = await result.json();
   const results = data.results;
+  console.log(results,"hello world this is my result")
   results.forEach((card) => {
     const div = document.createElement("div");
     div.classList.add("from");
