@@ -223,9 +223,7 @@ function buttons() {
 console.log("hello world");
 
 switch (global.page) {
-  case "/":
-    break;
-  case "/index.html":
+  case "/completemovie/":
     trends();
     backgroundImage();
     movies();
@@ -234,13 +232,13 @@ switch (global.page) {
 
     break;
 
-  case "/trend.html":
+  case "/completemovie/trend.html":
     seemore();
     break;
-  case "/movies.html":
+  case "/completemovie/movies.html":
     seemoremovie();
     break;
-  case "/series.html":
+  case "/completemovie/series.html":
     seemoreseries();
     break;
 }
