@@ -212,7 +212,7 @@ seriescollection()
 
 }
 
-
+console.log("hello world")
 
 switch(global.page){
   case "/index.html":
@@ -221,6 +221,7 @@ switch(global.page){
  movies()
  series()
  buttons()
+
 
  break;
 
