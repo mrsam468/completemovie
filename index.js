@@ -181,7 +181,7 @@ results.forEach(card => {
   const div=document.createElement("div");
   div.classList.add("cast")
   div.innerHTML=`<img id="card-image" src=${baseurl_image}${card.poster_path} alt="${card.title}">`
-  document.querySelector("#collection-genre").appendChild(div)
+  document.querySelector("#collection-genres").appendChild(div)
 });
 }
 function buttons(){
@@ -193,11 +193,8 @@ moviecollection()
 buttonone.addEventListener("click",()=>{
 buttonone.classList.add("button-click");
 buttontwo.classList.remove("button-click");
-const dom=document.querySelectorAll(".cast")
-dom.forEach(card=>{
-card.innerHTML=""
-
-})
+const dom=document.querySelector("#collection-genres")
+dom.innerHTML=""
 
 moviecollection()
 
@@ -207,12 +204,8 @@ buttontwo.addEventListener("click",()=>{
   buttonone.classList.remove("button-click");
   
     
-const dom=document.querySelectorAll(".from")
-dom.forEach(card=>{
-card.innerHTML=""
-})
-// dom.item(0)
-
+const dom=document.querySelector("#collection-genre")
+dom.innerHTML=""
 seriescollection()
   
 })

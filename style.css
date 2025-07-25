@@ -499,6 +499,15 @@ list-style:circle;
     /* justify-content:space-between; */
     gap:25px;
     height:296px;
+    margin-bottom: 0px;
+}
+#collection-genres{
+    width:1,440px;
+    display:flex;
+   margin-top:-300px;
+    /* justify-content:space-between; */
+    gap:25px;
+    height:296px;
 }
 #collection-text{
     font-family:lato,sans-serif;
