@@ -568,15 +568,20 @@ list-style:circle;
 
 
 #continue-watching{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding:40px;
     width:1,440px;
-    height:380px;
-    margin-top:50px;
+    height:390px;
+    /* margin-top:50px; */
 }
 #continue-watching-texts{
     display:flex;
     justify-content: space-between;
     /* gap:150px; */
-    padding:70px;
+    /* padding:70px; */
     align-items: center;
 }
 #continue-watching-header{
@@ -588,13 +593,23 @@ list-style:circle;
     color:#EBFAFF;
 }
 #continue-watching-button{
+    font-size:26px;
     width:141px;
     height:33px;
-    background-color: #030A1B  ;
-    color:#EBFAFF;
-    border: 1px solid #EBFAFF;
+    background-color: #ffffff  ;
+    color:#228EE5;
+
+    border: 1px solid #c1dee8;
+    display:flex;
+}
+a{
+    text-decoration: none;
 }
 #continue-watching-main{
+    display:flex;
+justify-content: space-between;
+gap:30px;
+box-shadow:10px 10px 5px rgba(112, 144, 176, 0.2); ;
     width:1,440px;
     height:298px;
 }
@@ -602,6 +617,31 @@ list-style:circle;
     width:481px;
     height: 298px;
 }
+#characters{
+    width:1,440;
+    height: 357px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:50px;
+}
+#main-characters{
+    display:flex;
+    justify-content: space-between;
+    gap:30px;
+}
+.character-images{
+    width:166px;
+    height:166px;
+    border-radius: 500px;
+}
+#family-stream{
+    width:1,440px;
+    height:1,042px;
+    margin-top: 80px;
+    background-color: #228EE5;
+}
+
 @media screen and (max-width: 600px) {
   
    body{
@@ -1105,7 +1145,26 @@ display:none;
     display:flex;
     height:296px;
 }
-
-
+#collection-genres{
+    width:330px;
+    display:flex;
+   margin-top:-300px;
+    /* justify-content:space-between; */
+    gap:25px;
+    height:296px;
+}
+#collection-text{
+    font-family:lato,sans-serif;
+    font-weight:700px;
+    font-style: bold;
+    font-size:26px;
+    line-height: 100%;
+    margin-left: 4px;
+    color:#EBFAFF;
+    text-decoration: capitalize;
+}
+.images{
+    width:204px;
+}
 
 }

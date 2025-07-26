@@ -221,7 +221,26 @@ function buttons() {
 }
 
 async function watching(){
-const url = baseurl +continu ;
+const url = baseurl +movie ;
+  const result = await fetch(url, {
+    method: "GET",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YzBkZjBlZDNiMjIyMDgwMDc3NzM2Mzg4ODEwMGM4ZiIsIm5iZiI6MTc0OTc5NTczOS42NjIwMDAyLCJzdWIiOiI2ODRiYzM5YjFmNmQxOGU2NTEzZmRlZGQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.9KOzF92SpnaBDZiJGNFUiJlX52JyFSTJNv1FHiJF-Yw",
+      Accept: "application/json",
+    },
+  });
+  const data = await result.json()
+  const results =data.results
+  results.forEach((card) => {
+    const div = document.createElement("div");
+    div.classList.add("images");
+    div.innerHTML = `<img class="images" src=${baseurl_image}${card.poster_path} alt="${card.title}">`;
+    document.querySelector("#continue-watching-main").appendChild(div);
+  })
+}
+async function characters(){
+  const url = baseurl +'person/popular?language=en-US&page=1'  ;
   const result = await fetch(url, {
     method: "GET",
     headers: {
@@ -233,34 +252,32 @@ const url = baseurl +continu ;
   const data = await result.json()
   const results =data.results
   console.log(results)
+  results.forEach((card) => {
+    const div = document.createElement("div");
+    div.classList.add("card");
+    div.innerHTML = `<img class="character-images" src=${baseurl_image}${card.profile_path} alt="${card.title}">`;
+    document.querySelector("#main-characters").appendChild(div);
+  })
 }
-watching()
-
+characters()
 switch (global.page) {
-  case "/":
+  case "/" :
     trends();
     backgroundImage();
     movies();
     series();
     buttons();
-
-    break;
-    case "/index.html":
-    // trends();
-    // backgroundImage();
-    // movies();
-    // series();
-    // buttons();
+    watching()
 
     break;
 
-  case "/trend.html":
+  case "/trend.html" :
     seemore();
     break;
-  case "/movies.html":
+  case "/movies.html" :
     seemoremovie();
     break;
-  case "/series.html":
+  case "/series.html" :
     seemoreseries();
     break;
 }
