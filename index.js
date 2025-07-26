@@ -246,11 +246,11 @@ switch (global.page) {
 
     break;
     case "/index.html":
-    trends();
-    backgroundImage();
-    movies();
-    series();
-    buttons();
+    // trends();
+    // backgroundImage();
+    // movies();
+    // series();
+    // buttons();
 
     break;
 
