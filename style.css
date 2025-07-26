@@ -567,6 +567,41 @@ list-style:circle;
 
 
 
+#continue-watching{
+    width:1,440px;
+    height:380px;
+    margin-top:50px;
+}
+#continue-watching-texts{
+    display:flex;
+    justify-content: space-between;
+    /* gap:150px; */
+    padding:70px;
+    align-items: center;
+}
+#continue-watching-header{
+    /* width:402px; */
+    font-family:lato,sans-serif;
+    font-weight: 700px;
+    font-style:bold;
+    font-size:48px;
+    color:#EBFAFF;
+}
+#continue-watching-button{
+    width:141px;
+    height:33px;
+    background-color: #030A1B  ;
+    color:#EBFAFF;
+    border: 1px solid #EBFAFF;
+}
+#continue-watching-main{
+    width:1,440px;
+    height:298px;
+}
+.images{
+    width:481px;
+    height: 298px;
+}
 @media screen and (max-width: 600px) {
   
    body{

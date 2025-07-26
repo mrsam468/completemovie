@@ -6,6 +6,7 @@ const baseurl_image = "https://image.tmdb.org/t/p/w500/";
 const trend = "/trending/all/day?language=en-US";
 const movie = "/movie/popular?language=en-US&page=1";
 const serie = "/tv/popular?language=en-US&page=1";
+const continu='movie/3/images ' 
 
 async function fetchapidata(api_url) {
   const apikey = "3fd2be6f0c70a2a598f084ddfb75487c";
@@ -169,7 +170,6 @@ async function moviecollection() {
   });
   const data = await result.json();
   const results = data.results;
-  console.log(results,"hello world this is my result")
   results.forEach((card) => {
     const div = document.createElement("div");
     div.classList.add("from");
@@ -220,10 +220,32 @@ function buttons() {
   });
 }
 
-console.log("hello world");
+async function watching(){
+const url = baseurl +continu ;
+  const result = await fetch(url, {
+    method: "GET",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YzBkZjBlZDNiMjIyMDgwMDc3NzM2Mzg4ODEwMGM4ZiIsIm5iZiI6MTc0OTc5NTczOS42NjIwMDAyLCJzdWIiOiI2ODRiYzM5YjFmNmQxOGU2NTEzZmRlZGQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.9KOzF92SpnaBDZiJGNFUiJlX52JyFSTJNv1FHiJF-Yw",
+      Accept: "application/json",
+    },
+  });
+  const data = await result.json()
+  const results =data.results
+  console.log(results)
+}
+watching()
 
 switch (global.page) {
-  case "/completemovie/":
+  case "/":
+    trends();
+    backgroundImage();
+    movies();
+    series();
+    buttons();
+
+    break;
+    case "/index.html":
     trends();
     backgroundImage();
     movies();
@@ -232,13 +254,13 @@ switch (global.page) {
 
     break;
 
-  case "/completemovie/trend.html":
+  case "/trend.html":
     seemore();
     break;
-  case "/completemovie/movies.html":
+  case "/movies.html":
     seemoremovie();
     break;
-  case "/completemovie/series.html":
+  case "/series.html":
     seemoreseries();
     break;
 }
