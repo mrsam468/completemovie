@@ -270,6 +270,14 @@ switch (global.page) {
     watching()
 
     break;
+    case "/index.html":
+       trends();
+    backgroundImage();
+    movies();
+    series();
+    buttons();
+    watching()
+    break;
 
   case "/trend.html" :
     seemore();
@@ -277,7 +285,7 @@ switch (global.page) {
   case "/movies.html" :
     seemoremovie();
     break;
-  case "/series.html" :
+  case "/series.html":
     seemoreseries();
     break;
 }
